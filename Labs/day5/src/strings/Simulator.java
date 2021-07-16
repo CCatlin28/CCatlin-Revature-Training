@@ -14,10 +14,10 @@ public class Simulator {
 		System.out.println(three);
 		System.out.println(four);
 		
-		System.out.println(one == two);
-		System.out.println(one == three);
-		System.out.println(three == two);
-		System.out.println(one == four);
+		System.out.println(one == two); //false
+		System.out.println(one == three); // true
+		System.out.println(three == two); // false
+		System.out.println(one == four); // false
 		/*
 		 * the '==' operator compares memory addresses
 		 * When creating Strings, string literals are
