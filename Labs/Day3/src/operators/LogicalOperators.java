@@ -9,7 +9,6 @@ package operators;
  * The logical operators are & (and) and  (or)
  */
 public class LogicalOperators {
-
 	public static void main(String[] args) {
 		/*
 		 * AND operators will return false unless both
@@ -29,8 +28,32 @@ public class LogicalOperators {
 		System.out.println(true | false); // true
 		System.out.println(false | true); // true
 		System.out.println(false | false); // false
+		
+		
+		/*
+		 * With a shortcircuit and function (&&) the expression will
+		 * stop looking when it reaches a false answer
+		 * With a shortcircuit or function (||) the expression will
+		 * stop looking when it reaches a true answer
+		 */
+		System.out.println("SHORTCIRCUIT [AND]: ");
+		System.out.println(printAndReturnTrue() & printAndReturnFalse());
+		System.out.println(printAndReturnTrue() && printAndReturnFalse());
+		System.out.println(printAndReturnFalse() & printAndReturnTrue());
+		System.out.println(printAndReturnFalse() && printAndReturnTrue());
+		
+		System.out.println("SHORTCIRCUIT [OR]:");
+		System.out.println(printAndReturnTrue() | printAndReturnFalse());
+		System.out.println(printAndReturnTrue() || printAndReturnFalse());
 	}
 	
+	public static boolean printAndReturnTrue() {
+		System.out.println("This method will return True!");
+		return true;
+	}
 	
-	
+	public static boolean printAndReturnFalse() {
+		System.out.println("This method will return False!");
+		return false;
+	}
 }

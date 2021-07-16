@@ -18,21 +18,26 @@ public class PrimitiveDatatypes {
 		System.out.println(b);
 		
 		short s = 1000;
-		int i = (int)100_000_000_000_000L; 
-		//can use _ in place of , to help readability
+		
+		int i = (int)10_000_000_000_000L; //can use _ in place of , to help readability
 		
 		// Use the letter 'L' to represent a long value
-		long l = 100000000000000L;
+		long l = 10_000_000_000_000L;
 		
-		//use the letter "F" to represent a float value
+		//use the letter 'F' to represent a float value
 		float f = 1000.00F;
+		
 		double d = 1000.00;
 		
 		char c = 'a';
 
-		//boolean is true or false only has two options
+		/*
+		 * Booleans are representations for either
+		 * true or false
+		 */
 		boolean tru = true;
 		boolean fal = false;
+		
 		
 		/*
 		 * When converting between a decimal point
@@ -40,8 +45,8 @@ public class PrimitiveDatatypes {
 		 * truncate the numbers after the decimal
 		 */
 		double decimal = 99.999;
-		System.out.println(decimal); //99.999
-		int number = (int)decimal; //downcasting
-		System.out.println(number); //99
+		System.out.println(decimal); // 99.999
+		int number = (int)decimal; // downcasting
+		System.out.println(number); // 99
 	}
 }
