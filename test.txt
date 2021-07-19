@@ -1,10 +1,21 @@
-add information and change this file
-how does this work?
+line 1: add information and change this file
+line 2: how does this work?
+line 3:
+line 4: Updating this information seems to work fairily easily
+line 5: 
+line 6: updating this in main to move to other branch
+line 7:
+Line 8: Now making changes in other to move to main
+line 9:
+line 10: test for a conflict
+line 11: am I adding to the file
+line 12:
+line 13:
+line 14:
+line 15:
+line 16:
+line 17:
+line 18:
+line 19:
+line 20:
 
-Updating this information seems to work fairily easily
-
-updating this in main to move to other branch
-
-Now making changes in other to move to main
-
-test for a conflict
