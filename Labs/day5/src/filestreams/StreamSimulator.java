@@ -34,6 +34,7 @@ public class StreamSimulator {
 		for (int i = 0; i < 5; i++) {
 		for (char letter = 'A'; letter <= 'Z'; letter++) {
 			fos.write(letter);
+		}
 			fos.write('\n'); //start new line
 		}
 		if (fos != null)
@@ -51,4 +52,4 @@ public class StreamSimulator {
 		}
 		
 	}
-}
+
