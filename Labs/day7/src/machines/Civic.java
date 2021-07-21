@@ -7,4 +7,11 @@ package machines;
  */
 public class Civic extends Sedan{
 
+	public Civic(int passengerCount, String engineSize, String model, String type) {
+		super(passengerCount, engineSize, model, type);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
 }
