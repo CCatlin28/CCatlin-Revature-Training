@@ -1,9 +1,13 @@
 package game;
 
+
+
 import fixtures.Room;
 
 public class RoomManager {
 	Room startingRoom;
+	
+	
 	static Room[] rooms;
 	
 	
@@ -16,8 +20,18 @@ public class RoomManager {
 				+ " The bookshelves continue on the west wall past the opening to the hallway."
 				+ " At the other end of the large room is an office area with a huge 'u-shaped' desk."
 				+ " Past the office area on the north wall is the entrance to the kitchen.");
-		this.rooms[0] = main;
 		this.startingRoom = main;
+		String exits [] = {"North: The Kitchen", null , "South: The Front Yard" , "West: The Hallway"};
+		System.out.println("Exits");
+		int index = 0;
+		while (index < exits.length) {
+			if (exits[index] != null) {
+				System.out.println(exits[index]);
+				index++;
+			} else index++;
+		}
+		
+				
 	}
 	public void hall() {
 	Room hall = new Room(
@@ -28,6 +42,15 @@ public class RoomManager {
 		+ " Bathroom 1 and to the north is Child Room 2. The only decoration is the"
 		+ " old fashioned door-bell fixture, a holdover from when the house was new.");
 	this.rooms[1] = hall;
+	String exits [] = {"North: Child Room 2", "East: The Living Room" , "South: Child Room 1" , "West: The Bathroom"};
+	System.out.println("Exits");
+	int index = 0;
+	while (index < exits.length) {
+		if (exits[index] != null) {
+			System.out.println(exits[index]);
+			index++;
+		} else index++;
+	}
 	}
 	public void childRoom1() {
 		Room childRoomOne = new Room(
@@ -36,6 +59,15 @@ public class RoomManager {
 			"A typical teenager's bedroom, containing a loft bed, a desk, 3 bookshelves and some "
 			+ "posters. It is obvious this teenager likes Anime and LOVES to read.");
 		this.rooms[2] = childRoomOne;
+		String exits [] = {"North: The Hall", null , null , null};
+		System.out.println("Exits");
+		int index = 0;
+		while (index < exits.length) {
+			if (exits[index] != null) {
+				System.out.println(exits[index]);
+				index++;
+			} else index++;
+		}
 		}
 	public void bathroom() {
 		Room bathroom = new Room(
@@ -45,6 +77,15 @@ public class RoomManager {
 			+ " pink tile, including a pink bathtub and pink counter top. It is complimented with "
 			+ " a coordinating blue paint.");
 		this.rooms[3] = bathroom;
+		String exits [] = {null, "East: The Hallway" , null , null};
+		System.out.println("Exits");
+		int index = 0;
+		while (index < exits.length) {
+			if (exits[index] != null) {
+				System.out.println(exits[index]);
+				index++;
+			} else index++;
+		}
 		}
 	public void childRoom2() {
 		Room childRoomTwo = new Room(
@@ -55,7 +96,15 @@ public class RoomManager {
 				+ " to be there only to hold the stuffed animals."
 				+ " There is a closed door straight ahead, but it is partially blocked by toys.");
 		this.rooms[4] = childRoomTwo;
-		
+		String exits [] = {"North: The Bedroom", null , "South: The Hallway" , null};
+		System.out.println("Exits");
+		int index = 0;
+		while (index < exits.length) {
+			if (exits[index] != null) {
+				System.out.println(exits[index]);
+				index++;
+			} else index++;
+		}
 	}
 	public void kitchen() {
 	Room kitchen = new Room(
@@ -66,6 +115,15 @@ public class RoomManager {
 		+ " The rest of the room is encircled by counters and cabinates, with the refridgerator"
 		+ " anchoring the end on the north wall and the oven anchoring on the south wall.");
 	this.rooms[5] = kitchen;
+	String exits [] = {"North: The Backyard", null , "South: The Living Room" , "West: The Bedroom"};
+	System.out.println("Exits");
+	int index = 0;
+	while (index < exits.length) {
+		if (exits[index] != null) {
+			System.out.println(exits[index]);
+			index++;
+		} else index++;
+	}
 	}
 	public void bedroom() {
 		Room bedroom = new Room(
@@ -74,6 +132,15 @@ public class RoomManager {
 			"A bedroom with a free standing wardrobe in place of a closet, with a king sized "
 			+ "bed. That leads into a combined bathroom and laundry room.");
 		this.rooms[6] = bedroom;
+		String exits [] = {null, "East: The Kitchen" , "South: Child Room 2" , "West: The Laundry Room"};
+		System.out.println("Exits");
+		int index = 0;
+		while (index < exits.length) {
+			if (exits[index] != null) {
+				System.out.println(exits[index]);
+				index++;
+			} else index++;
+		}
 		}
 	public void laundry() {
 		Room laundry = new Room(
@@ -82,6 +149,15 @@ public class RoomManager {
 			"A large room with bathroom facilities along the north wall, washer and dryer on the "
 			+ "west wall, and the south wall opening to a utility closet and storage closet.");
 		this.rooms[7] = laundry;
+		String exits [] = {null, "East: The Bedroom" , null , null};
+		System.out.println("Exits");
+		int index = 0;
+		while (index < exits.length) {
+			if (exits[index] != null) {
+				System.out.println(exits[index]);
+				index++;
+			} else index++;
+		}
 		}
 
 }
