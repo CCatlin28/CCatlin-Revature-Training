@@ -2,48 +2,28 @@ package game;
 
 import java.util.Scanner;
 
-
 public class Main {
-public static Scanner scan = new Scanner(System.in);
+	public static Scanner scan = new Scanner(System.in);
 	
-	public Scanner getScanner() {
+		public Scanner getScanner() {
 		return scan;
-}
+		}
 	
 	public static void main (String[] args) {
 		RoomManager rm = new RoomManager();
-		Menu menu = new Menu();
-		System.out.println("Input Instructions here");
-		System.out.println(" ");
-		System.out.println(":::CURRENT ROOM:::");
-		System.out.println(" ");
-		rm.init();
-		menu.getScanner();
-		String word = scan.next();
-		//scan the input and compare to exit options to pull the next method
-		//solved the first problem now to solve the next... apparently all I had to do to get my
-		//brain to work again was to ask questions... didn't even need the feedback
-		if (word == "go") { 
-		}
-			
-		}
 		
-	}
-	
-	private static void printRoom(Player player) {
-	
-		
-	//	System.out.println(currentRoom);
-		
-	}
-	
-	private static String[] collectInput() {
-		return null;
-		
-	}
-	
-	private static void parse(String[] command, Player player) {
-		
-	}
+			System.out.println("To move around the house please type"
+					+ " the word 'go' followed by the name of"
+					+ " the room you would like to enter."
+					+ " To interact with an item type the word 'interact'"
+					+ " followed by the name of the item you would like to"
+					+ " interact with. To try something fun type the word 'fun'."
+					+ " To leave the game type 'exit' or go to one of the yards.");
 
+		Player p = new Player();
+		p.setCurrentRoom(rm.main());
+		p.getCurrentRoom();
+		p.Instructions();
+	}
+	
 }
