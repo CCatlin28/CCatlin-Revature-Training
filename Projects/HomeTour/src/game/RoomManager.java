@@ -3,7 +3,17 @@ package game;
 import fixtures.Room;
 
 public class RoomManager {
+	
+	private int roomNumber;
+	public int getRoomNumber() {
 			
+		return this.roomNumber;
+	}
+	public void setRoomNumber(int roomNumber) {
+		this.roomNumber = roomNumber;
+	}
+	
+		
 	public Room main() {
 			Room main = new Room(
 				"The Living Room",
@@ -20,13 +30,15 @@ public class RoomManager {
 		System.out.println("Couch");
 		System.out.println();
 		System.out.println("::Exits::");
-		int index = 0;
+	
+			int index = 0;
 		while (index < exits.length) {
 			if (exits[index] != null) {
 				System.out.println(exits[index]);
 				index++;
 			} else index++;
 		} 
+		setRoomNumber (0);
 		return main;
 	}
 	

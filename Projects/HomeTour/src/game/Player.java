@@ -24,26 +24,32 @@ public class Player {
 		Fun fun = new Fun();
 		getScanner();
 		String word = scan.next();
-		try {
+	
 		if (word.equalsIgnoreCase( "go")) {
 			Doorways ();
 		} else if (word.equalsIgnoreCase("interact")) {
 			Interact();
 		} else if (word.equalsIgnoreCase("fun")){
 						fun.doSomething();
-		} else 	{
-		System.out.println("Thank you for stopping by!");
+		} else 	if (word.equalsIgnoreCase("exit")) {
+		End ();
+	} else {
+		WrongWord();
+		
 	}
-		} finally { 
-			System.out.println("Have a Good Day!");
-		}
-		Doorways();
+	 
+	 	
 	}
 		
 	
 public void Doorways() {
 	RoomManager rm = new RoomManager();
-		String exit = scan.next();
+	String exit = scan.next();
+	//int current = rm.getRoomNumber();
+		// (current == 0, & exit.equalsIgnoreCase("Teen")){ 
+			//	WrongWord();
+		//	}
+//		}
 		if (exit.equalsIgnoreCase("Living")){
 			String reset = scan.next();
 			setCurrentRoom(rm.main());
@@ -73,11 +79,15 @@ public void Doorways() {
 			setCurrentRoom(rm.laundry());
 			getCurrentRoom();
 		}else if (exit.equalsIgnoreCase("Back")){
+			String reset = scan.next();
 			System.out.println("You have exited the house into the Backyard.");
 		}else if (exit.equalsIgnoreCase("Front")){
+			String reset = scan.next();
 			System.out.println("You have exited the house into the Frontyard.");
 		} else { System.out.println("You ran into a wall");
-		} Instructions();
+				getCurrentRoom();
+		
+		}Instructions();
 	}
 
 	public void Interact() {
@@ -93,8 +103,17 @@ public void Doorways() {
 			im.Couch();
 		} else if (object.equalsIgnoreCase("Bed")) {
 			im.Bed();
-		} else { System.out.println("Dance to the Music");
+		} else { 
+			System.out.println("Dance to the Music");
 		} Instructions();
 		}
 	
+	public void End() {
+		System.out.println("Thank you for stopping by!");
+	}
+	
+	public void WrongWord() {
+		System.out.println("You input an invalid option");
+		Instructions();
+	}
 }

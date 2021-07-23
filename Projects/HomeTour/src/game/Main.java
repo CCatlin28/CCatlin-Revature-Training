@@ -23,7 +23,11 @@ public class Main {
 		Player p = new Player();
 		p.setCurrentRoom(rm.main());
 		p.getCurrentRoom();
+try {
 		p.Instructions();
+} finally {
+	System.out.println("You are a magician with the power to teleport.");
+}
 	}
 	
 }
